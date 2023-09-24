@@ -59,7 +59,8 @@ export async function Header() {
           rel="noopener noreferrer"
           className={cn(buttonVariants({ variant: 'outline' }))}
         >
-          <span className="hidden ml-2 md:flex">Google</span>
+            <IconGitHub />
+          <span className="hidden ml-2 md:flex">Github</span>
         </a>
       </div>
     </header>
