@@ -52,7 +52,7 @@ export async function Header() {
           )}
         </div>
       </div>
-      <div className="flex items-center justify-center space-x-4 font-display">
+      <div className="flex items-center justify-center space-x-4 font-display font-bold">
           paralegal.ai
       </div>
     </header>
