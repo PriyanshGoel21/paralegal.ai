@@ -30,7 +30,7 @@ export async function POST(req: Request) {
 
   console.log(messages)
 
-  const  message = messages.pop()
+  // const  message = messages.pop()
   // if (message.content.includes("generate") || message.content.includes("draft")){
   //   messages.push("Task: Draft a professional legal document like contracts, wills, legal notices, court documents, etc. specified in the user input, delimited by triple backticks.\n" +
   //       "\n" +
