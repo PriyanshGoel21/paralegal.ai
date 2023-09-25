@@ -28,6 +28,8 @@ export async function POST(req: Request) {
     configuration.apiKey = previewToken
   }
 
+  console.log(messages)
+
   const  message = messages.pop()
   if (message.includes("generate") || message.includes("draft")){
     messages.push("Task: Draft a professional legal document like contracts, wills, legal notices, court documents, etc. specified in the user input, delimited by triple backticks.\n" +
