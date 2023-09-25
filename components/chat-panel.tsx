@@ -60,6 +60,7 @@ export function ChatPanel({
         <div className="space-y-4 border-t bg-background px-4 py-2 shadow-lg sm:rounded-t-xl sm:border md:py-4">
           <PromptForm
             onSubmit={async value => {
+                value = ".."+value
               if (value.toLowerCase().includes("generate") || value.toLowerCase().includes("draft")){
                 value = "Task: Draft a professional legal document like contracts, wills, legal notices, court documents, etc. specified in the user input, delimited by triple backticks.\n" +
                     "\n" +
@@ -77,7 +78,7 @@ export function ChatPanel({
                     "The language used in the document must be clear and concise, and easy to understand for all parties involved.\n" +
                     "The document must be comprehensive and cover all of the relevant terms and conditions.\n" +
                     "The document must be drafted in compliance with all applicable Indian laws and regulations.\n" +
-                    "The document must adhere to the guidelines specified by Indian law..\n" + value
+                    "The document must adhere to the guidelines specified by Indian law\n" + value
               }
 
               await append({
