@@ -31,28 +31,28 @@ export async function POST(req: Request) {
   console.log(messages)
 
   const  message = messages.pop()
-  if (message.includes("generate") || message.includes("draft")){
-    messages.push("Task: Draft a professional legal document like contracts, wills, legal notices, court documents, etc. specified in the user input, delimited by triple backticks.\n" +
-        "\n" +
-        "Input:\n" +
-        "The type of legal document (e.g., contract, will, legal notice, court document, etc.)\n" +
-        "A description of the legal document, including the following information:\n" +
-        "The names and addresses of the parties involved\n" +
-        "The key terms and conditions of the document\n" +
-        "Any other relevant details\n" +
-        "\n" +
-        "Output:\n" +
-        "A professional legal document that adheres to the guidelines specified by Indian law and is legally viable in the Indian court of law.\n" +
-        "\n" +
-        "Additional guidelines for legal documents:\n" +
-        "The language used in the document must be clear and concise, and easy to understand for all parties involved.\n" +
-        "The document must be comprehensive and cover all of the relevant terms and conditions.\n" +
-        "The document must be drafted in compliance with all applicable Indian laws and regulations.\n" +
-        "The document must adhere to the guidelines specified by Indian law.\n" + message)
-  }
-  else{
-    messages.push(message)
-  }
+  // if (message.content.includes("generate") || message.content.includes("draft")){
+  //   messages.push("Task: Draft a professional legal document like contracts, wills, legal notices, court documents, etc. specified in the user input, delimited by triple backticks.\n" +
+  //       "\n" +
+  //       "Input:\n" +
+  //       "The type of legal document (e.g., contract, will, legal notice, court document, etc.)\n" +
+  //       "A description of the legal document, including the following information:\n" +
+  //       "The names and addresses of the parties involved\n" +
+  //       "The key terms and conditions of the document\n" +
+  //       "Any other relevant details\n" +
+  //       "\n" +
+  //       "Output:\n" +
+  //       "A professional legal document that adheres to the guidelines specified by Indian law and is legally viable in the Indian court of law.\n" +
+  //       "\n" +
+  //       "Additional guidelines for legal documents:\n" +
+  //       "The language used in the document must be clear and concise, and easy to understand for all parties involved.\n" +
+  //       "The document must be comprehensive and cover all of the relevant terms and conditions.\n" +
+  //       "The document must be drafted in compliance with all applicable Indian laws and regulations.\n" +
+  //       "The document must adhere to the guidelines specified by Indian law.\n" + message)
+  // }
+  // else{
+  //   messages.push(message)
+  // }
 
   const res = await openai.createChatCompletion({
     model: 'gpt-3.5-turbo',
