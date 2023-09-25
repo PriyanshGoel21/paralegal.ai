@@ -4,7 +4,6 @@ import { Configuration, OpenAIApi } from 'openai-edge'
 
 import { auth } from '@/auth'
 import { nanoid } from '@/lib/utils'
-import * as console from "console";
 
 export const runtime = 'edge'
 
