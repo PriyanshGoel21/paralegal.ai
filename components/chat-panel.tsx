@@ -77,7 +77,7 @@ export function ChatPanel({
                     "The language used in the document must be clear and concise, and easy to understand for all parties involved.\n" +
                     "The document must be comprehensive and cover all of the relevant terms and conditions.\n" +
                     "The document must be drafted in compliance with all applicable Indian laws and regulations.\n" +
-                    "The document must adhere to the guidelines specified by Indian law.\n" + value
+                    "The document must adhere to the guidelines specified by Indian law..\n" + value
               }
 
               await append({
