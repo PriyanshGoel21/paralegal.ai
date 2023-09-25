@@ -12,6 +12,7 @@ import {
 import { useEnterSubmit } from '@/lib/hooks/use-enter-submit'
 import { cn } from '@/lib/utils'
 import { useRouter } from 'next/navigation'
+import {useRef} from "react";
 
 export interface PromptProps
   extends Pick<UseChatHelpers, 'input' | 'setInput'> {
@@ -28,12 +29,18 @@ export function PromptForm({
   const { formRef, onKeyDown } = useEnterSubmit()
   const inputRef = React.useRef<HTMLTextAreaElement>(null)
   const router = useRouter()
+  const inputFileRef= useRef(null);
 
   React.useEffect(() => {
     if (inputRef.current) {
       inputRef.current.focus()
     }
   }, [])
+
+  const handleAddFile=(event: React.MouseEvent<unknown>)=>{
+    // @ts-ignore
+    inputFileRef.current.click();
+  }
 
   return (
     <form
@@ -61,7 +68,7 @@ export function PromptForm({
                 'absolute left-0 top-4 h-8 w-8 rounded-full bg-background p-0 sm:left-4'
               )}
             >
-              <IconPlus />
+              <IconPlus onClick={(event)=>handleAddFile(event)} />
               <span className="sr-only">New Chat</span>
             </button>
           </TooltipTrigger>

@@ -104,11 +104,6 @@ function IconOpenAI({ className, ...props }: React.ComponentProps<'svg'>) {
   )
 }
 
-function IconParalegal({ className, ...props }: React.ComponentProps<'svg'>) {
-  return (
-      <img src={paralegal} alt={"paralegal"}  />
-  )
-}
 
 function IconVercel({ className, ...props }: React.ComponentProps<'svg'>) {
   return (
@@ -486,7 +481,6 @@ export {
   IconEdit,
   IconNextChat,
   IconOpenAI,
-  IconParalegal,
   IconVercel,
   IconGitHub,
   IconSeparator,
