@@ -11,7 +11,7 @@ import { Header } from '@/components/header'
 
 export const metadata: Metadata = {
   title: {
-    default: 'paralegal.ai Legal Assistant',
+    default: 'paralegal.ai | Legal Assistant',
     template: `%s - Next.js AI Chatbot`
   },
   description: '',
