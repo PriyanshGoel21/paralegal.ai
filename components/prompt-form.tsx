@@ -69,14 +69,14 @@ The document must be drafted in compliance with all applicable Indian laws and r
 The document must adhere to the guidelines specified by Indian law.
 
 \`\`\`
-Create a contract between Lala Arnav Vatsal and Priyansh Goel. It should state that Priyansh would give Arnav 1 lakh rupees if they win the smart India hackathon.
+${input}
 \`\`\`
 
 For the above instructions, determine if anything needs to be clarified. 
 
 If yes, do not carry them out. You can make reasonable assumptions, but if you are unsure, ask questions in short for clarification. If there are multiple questions, ask them one by one. If you still need more information, keep asking again until you have all the required information. DO NOT OUTPUT PLACEHOLDER TEXT IN THE OUTPUT DOCUMENT.
 
-If nothing else needs to be clarified, output the document.${input}`)
+If nothing else needs to be clarified, output the document.`)
       }}
       ref={formRef}
     >
