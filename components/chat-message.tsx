@@ -72,7 +72,7 @@ export function ChatMessage({ message, ...props }: ChatMessageProps) {
             }
           }}
         >
-          {message.content.split("..")[1]}
+          {message.content}
         </MemoizedReactMarkdown>
         <ChatMessageActions message={message} />
       </div>
